@@ -90,6 +90,82 @@ The live host-only poisoning simulation was **not performed**, because the lab V
 
 The capture demonstrates a clean ARP exchange with no poisoning indicators. Every IP maps to exactly one MAC, and both unicast replies are direct answers to specific requests. The analytical workflow applied here — field extraction, claim summarisation, unicast-reply isolation — is directly transferable to hostile captures, where the same filters would surface duplicate-IP conflicts, unsolicited replies, and gateway MAC changes.
 
+---
+
+## Lab Screenshots
+---
+
+<img width="1280" height="663" alt="Figure 3 1- Lab folder structure created successfully" src="https://github.com/user-attachments/assets/01eb73f6-31d6-4a9d-af6d-49127ac8e796" />
+Figure 3.1 — Lab folder structure created successfully.
+
+---
+
+<img width="1280" height="663" alt="Figure 3 2- Required tools installed and verified" src="https://github.com/user-attachments/assets/a86b90f8-827e-4b8d-849c-56d31cffe899" />
+Figure 3.2 — TShark 4.6.6, Python 3.14.6, and Scapy 2.7.0 installed and verified.
+
+---
+
+<img width="1280" height="663" alt="Figure 3 3- smtp pcap file details, capinfos summary, and matching original:working-copy hashes" src="https://github.com/user-attachments/assets/0ae0b8ce-efc9-4b54-ab43-f317f4749116" />
+Figure 3.3 — smtp pcap file details, capinfos summary, and matching original:working-copy hashes.
+
+---
+
+<img width="1280" height="663" alt="Figure 4 1- TCP conversation list showing the single SMTP session" src="https://github.com/user-attachments/assets/782e037e-29a4-40f2-8278-f95aea99308e" />
+Figure 3.4 — TCP conversation list showing the single SMTP session
+
+---
+
+<img width="1280" height="663" alt="Figure 4 2- SMTP packet inventory — first and last SMTP frames" src="https://github.com/user-attachments/assets/aabee20e-a39e-4239-bd70-4fdcec536c11" />
+Figure 4.1 — SMTP packet inventory — first and last SMTP frames
+
+---
+<img width="1280" height="658" alt="Screenshot 7 — save as 07_arp_table_after_ping png " src="https://github.com/user-attachments/assets/a1037c23-5e4a-4bc6-aeed-2690e0574692" />
+Figure 4.2 — ARP_table_after_ping
+
+---
+<img width="1280" height="660" alt="Screenshot 9 — save as 09_arp_reply_inventory" src="https://github.com/user-attachments/assets/e5bff456-8abc-44cc-81d4-072b17beae1e" />
+Screenshot 9 — _arp_reply_inventory
+
+---
+
+<img width="1280" height="660" alt="Screenshot 8 — save as 08_normal_arp_fields" src="https://github.com/user-attachments/assets/d4c2ef01-cbda-451f-a094-795fde65454c" />
+Screenshot10 normal_arp_fields
+
+---
+
+<img width="1280" height="663" alt="Figure 5 2- 220 service-ready banner from xc90 websitewelcome com (frame 6) shown in Wireshark&#39;s packet details pane" src="https://github.com/user-attachments/assets/a39746cf-10d5-45ad-9593-bf11ad17e56f" />
+Figure 4.5 — Inspection of the partial baseline — request frames only.
+
+---
+
+<img width="1280" height="663" alt="Figure 5 3- EHLO and AUTH LOGIN exchange (frames 7, 9, 10, 11, 12) shown in Wireshark" src="https://github.com/user-attachments/assets/b5d7118d-6450-4917-9784-46fd3fa2c543" />
+Figure 5.1 — ARP request and reply field extraction.
+
+---
+
+<img width="1280" height="663" alt="Figure 6 1- Offline Base64 decoding script and masked output" src="https://github.com/user-attachments/assets/6607ee16-fa9e-4389-8521-742a8c47c16c" />
+Figure 6.1 — ARP reply inventory — every ARP reply in the capture.
+
+---
+
+<img width="1280" height="663" alt="Figure 7 1- Follow TCP Stream showing the complete SMTP dialogue and message body" src="https://github.com/user-attachments/assets/90f2e91c-02ea-4510-9ef4-59e9b1276f09" />
+
+---
+
+<img width="1280" height="663" alt="Figure 7 3- Redacted message reconstruction (headers + sanitised body)" src="https://github.com/user-attachments/assets/768a6c17-43f0-4029-86b8-71e1ce5a1b0f" />
+
+---
+
+<img width="1280" height="663" alt="Figure 8 1- SMTP network metadata — MAC, IP, and port mapping" src="https://github.com/user-attachments/assets/d5c12782-7463-4fad-bd39-b93c7e28846a" />
+Figure 6.2 — IP-to-MAC claim summary.
+
+---
+
+<img width="1280" height="663" alt="Figure 8 2- Wireshark packet details for frame 10 (AUTH LOGIN) showing Ethernet II, IPv4, TCP, and SMTP sections with source and destination MACs" src="https://github.com/user-attachments/assets/b4bf9f83-998b-4db7-a949-d444f6d41f25" />
+
+---
+<img width="1280" height="663" alt="Figure 9 1- TLS:STARTTLS assessment — no TLS handshake observed" src="https://github.com/user-attachments/assets/c17be210-d147-40ff-8f2e-672c91fd130d" />
+
 ## Analysis
 
 ### 1. Environment Setup
